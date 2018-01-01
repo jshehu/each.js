@@ -18,7 +18,7 @@ Error handling: If one of cb functions throws then each function throws too.
 
 
 ### Intallation
-```
+```sh
 npm i -S each.js
 ```
 
