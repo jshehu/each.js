@@ -1,0 +1,33 @@
+{
+  "name": "each.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeton Shehu",
+  "license": "ISC",
+  "description": "###### API",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "foreach",
+    "each",
+    "async",
+    "parallel",
+    "series",
+    "concurrent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jshehu/each.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jshehu/each.js/issues"
+  },
+  "homepage": "https://github.com/jshehu/each.js#readme"
+}
