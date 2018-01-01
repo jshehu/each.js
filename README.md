@@ -54,7 +54,7 @@ const timeoutPromise = timeout => new Promise((resolve, reject) => {
     console.log(item);
     await timeoutPromise(1000);
     return item;
-  }, 2);
+  });
   console.log(result1);
 
   // series
@@ -63,7 +63,7 @@ const timeoutPromise = timeout => new Promise((resolve, reject) => {
     console.log(item);
     await timeoutPromise(1000);
     return item;
-  }, 2);
+  });
   console.log(result2);
 
   // concurrent
