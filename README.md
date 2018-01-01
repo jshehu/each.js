@@ -1,6 +1,6 @@
 # each.js
 
-#### API
+### API
 
  - `each.parallel(iterator, cb)`
  - `each.series(iterator, cb)`
@@ -17,12 +17,12 @@ All 3 functions: **paralel**, **series** and **concurrent** return promise which
 Error handling: If one of cb functions throws then each function throws too.
 
 
-##### Intallation
+### Intallation
 ```
 npm i -S each.js
 ```
 
-##### Examples
+### Examples
 ```js
 const each = require('each.js');
 
