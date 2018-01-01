@@ -1,13 +1,13 @@
 {
   "name": "each.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeton Shehu",
   "license": "ISC",
-  "description": "Foreach: parallel, series and concurrent with promises.",
+  "description": "This package is a foreach implementation of parallel, series and concurrent execution with promises.",
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",

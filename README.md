@@ -1,5 +1,7 @@
 # each.js
 
+This package is a foreach implementation of parallel, series and concurrent execution with promises.
+
 ### API
 
  - `each.parallel(iterator, cb)`
