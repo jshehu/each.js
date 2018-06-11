@@ -3,7 +3,7 @@ const each = {
    * Foreach parallel.
    * @param iterator
    * @param cb
-   * @return {Promise<[any , any , any , any , any , any , any , any , any , any]>}
+   * @return {Promise<Array>}
    */
   parallel: (iterator, cb) => {
     const promises = [];
@@ -34,7 +34,7 @@ const each = {
    * @param iterator
    * @param cb
    * @param concurrency
-   * @return {Promise<null>}
+   * @return {Promise<Array>}
    */
   concurrent: async (iterator, cb, concurrency) => {
     let [result, promises, index] = [[], [], 0];
@@ -50,6 +50,24 @@ const each = {
       result = result.concat(await Promise.all(promises));
     }
     return result;
+  },
+  /**
+   * Retry.
+   * @param cb
+   * @param retries
+   * @param args
+   * @returns {Promise<*>}
+   */
+  retry: async (cb, retries, ...args) => {
+    let error;
+    for (let i = 0; i <= retries; i += 1) {
+      try {
+        return await cb(...args, i); // eslint-disable-line
+      } catch (err) {
+        error = err;
+      }
+    }
+    throw error;
   },
 };
 
