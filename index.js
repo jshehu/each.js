@@ -55,16 +55,20 @@ const each = {
    * Retry.
    * @param cb
    * @param retries
-   * @param args
+   * @param options
    * @returns {Promise<*>}
    */
-  retry: async (cb, retries, ...args) => {
+  retry: async (cb, retries, options = {}) => {
+    options.args = options.args || [];
     let error;
     for (let i = 0; i <= retries; i += 1) {
       try {
         return await cb(...args, i); // eslint-disable-line
       } catch (err) {
         error = err;
+        if (options.throwError && options.throwError(error)) {
+          throw error;
+        }
       }
     }
     throw error;
