@@ -63,7 +63,7 @@ const each = {
     let error;
     for (let i = 0; i <= retries; i += 1) {
       try {
-        return await cb(...args, i); // eslint-disable-line
+        return await cb(...options.args, i); // eslint-disable-line
       } catch (err) {
         error = err;
         if (options.throwError && options.throwError(error)) {
